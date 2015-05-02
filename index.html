@@ -10,7 +10,8 @@
 </head>
 <body>
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
   <script>
   $(document).ready(function() {
       $(".button-collapse").sideNav();
@@ -62,13 +63,12 @@
     <div id="bio" class="section scrollspy container">
       <div class="section no-pad-bot">
         <div class="container"> 
-          <div class="parallax"><img src="rsz_rsz_hamerschlag_hall_at_carnegie_mellon_university.jpg"></div>
             <h1 class="header center">Hi! I'm Josh.</h1>
-              <h5 class=" center header col s12 light">I'm a freshman ECE major at CMU, and a TA for 15-112, an amazing introductory computer science class here. I'm also an instructor of one of the many student-led courses at CMU.
-              I love computers - I've built them, sold them, and coded on them.</h5>
+              <h5 class="center header col s12 light">I'm a freshman ECE major at CMU. I love computers - I've built them, sold them, and coded on them. I'm a TA for 15-112, and an instructor of the League of Legends StuCo.</h5>
         </div>
       </div>
     </div>
+    <div class="parallax"><img src="hamerschlag.jpg"></div>
   </div>
   
   <div id="skills" class="section scrollspy no-pad-bot">
@@ -118,103 +118,160 @@
     <div class="parallax"><img src="rsz_gates.jpg"></div>
   </div>
 
-  <div id="education" class="section scrollspy no-pad-bot">
+  <div id="education" class="section scrollspy">
     <h2 class="center cyan-text text-darken-3" style="margin-top:55px">Education</h2>
     <h4 class="center">Carnegie Mellon University</h4>
     <div class="row">
-      <div class="col s12 m2 offset-m1">
+      <div class="center col s12 m4">
         <img src="CMU_Hamerschlag_Hall2.jpg" class="circle">
       </div>
-      <div class="col s12 m2">
-        <p class="condensed light" style="font-size:20px; margin-top:45px;">Major: Electrical and Computer Engineering</p>
-        <p class="condensed light" style="font-size:20px">Track: Computer Software</p>
-        <p class="condensed light" style="font-size:20px">Minor: Computer Science</p>
-        <p class="condensed light" style="font-size:20px">GPA: 3.7</p>
+      <div class="center col s12 m4">
+        <p class="center condensed light" style="font-size:20px">Major: Electrical and Computer Engineering</p>
+        <p class="center condensed light" style="font-size:20px">Track: Computer Software</p>
+        <p class="center condensed light" style="font-size:20px">Minor: Computer Science</p>
+        <p class="center condensed light" style="font-size:20px">GPA: 3.7</p>
       </div>
-
-      <!-- when update this, change margin of prev section and this section so it all looks right -->
-
-      <div class="col s12 m3">
-        <h5 class="center" style="margin-top:40px">Previous Relevant Coursework</h5>
-        <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
-          <li>
-            <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Fundamentals of Programming and Computer Science</div>
-            <div class="collapsible-body"><p>Also known as 15-112 - this is the class I am currently a TA for.  I went into the class
-            with barely any programming knowledge, and came out being able to make the project that you can view below.  It's one of the most amazing courses at CMU, hands down.</p></div>
-          </li>
-          <li>
-            <div class="collapsible-header"><i class="mdi-image-filter-2"></i>Introduction to Electrical and Computer Engineering</div>
-            <div class="collapsible-body"><p>This class goes over all of the main topics in ECE.  Everything from hardware to digital logic, from diodes to MOSFETs to muxes.</p></div>
-          </li>
-        </ul>
+      <div class="center col s12 m4">
+        <img src="uc-front.jpg" class="circle">
       </div>
-      <div class="col s12 m3">
-        <h5 class="center" style="margin-top:40px">Current Relevant Coursework</h5>
-        <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
-          <li>
-            <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Principles of Imperative Computation</div>
-            <div class="collapsible-body"><p>This is the class I will be TAing this summer.  Covers correctness of programs, and basic data structures and algorithms.  The course is taught in C.</p></div>
-          </li>
-          <li>
-            <div class="collapsible-header"><i class="mdi-image-filter-2"></i>Concepts of Mathematics</div>
-            <div class="collapsible-body"><p>A discrete mathematics course.  Goes over proof structure, set theory, induction, number theory, functions, and combinatorics.</p></div>
-          </li>
-        </ul>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8 offset-m2">
+          <h5 class="center">Previous Relevant Coursework</h5>
+          <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Fundamentals of Programming and CS</div>
+              <div class="collapsible-body"><p>Also known as 15-112 - this is the class I am currently a TA for.  I went into the class
+              with barely any programming knowledge, and came out being able to make the project that you can view below.  It's one of the most amazing courses at CMU, hands down.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-2"></i>Intro to ECE</div>
+              <div class="collapsible-body"><p>This class goes over all of the main topics in Electrical and Computer Engineering.  Everything from hardware to digital logic, from diodes to MOSFETs to muxes.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" style="margin-top:-20px;">
+        <div class="col s12 m8 offset-m2">
+          <h5 class="center">Current Relevant Coursework</h5>
+          <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Principles of Imperative Computation</div>
+              <div class="collapsible-body"><p>This is the class I will be TAing this summer.  Covers correctness of programs, and basic data structures and algorithms.  The course is taught in C.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-2"></i>Concepts of Mathematics</div>
+              <div class="collapsible-body"><p>A discrete mathematics course.  Goes over proof structure, set theory, induction, number theory, functions, and combinatorics.</p></div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="parallax-container">
-    <div class="parallax"><img src="fence.jpg"></div>
+    <div class="parallax"><img src="fence2.jpg"></div>
   </div>
 
-  <div id="experience" class="section scrollspy container no-pad-bot">
+  <div id="experience" class="section scrollspy">
     <h2 class="center cyan-text text-darken-3" style="margin-top:55px">Experience</h2>
-    <div class="row">
-      <div class="col s12 m2">
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m4">
         <img src="HCII_logo.svg.png" class="circle">
       </div>
-      <div class="center col s12 m6 offset-m1">
-        <p class="bold" style="font-size:30px; margin-top:50px;">This summer: Research at the Social Computing Lab in CMU's Human-Computer Interaction Institute, and TAing 15-122</p>
+      <div class="center col s12 m4">
+        <p class="bold" style="font-size:30px">This summer: Research at the Social Computing Lab in CMU's Human-Computer Interaction Institute, and TAing 15-122</p>
       </div>
-      <div class="col s12 m2 offset-m1">
+      <div class="center col s12 m4">
         <img src="At-sign.png" class="circle">
       </div>
     </div>
-    <div class="row valign-wrapper">
-      <div class="col s12 m2">
-        <img src="112-dragon.png" class="circle">
+    <div class="row hide-on-med-and-up">
+      <div class="center col s12 m2">
+        <img src="HCII_logo.svg.png" class="circle">
       </div>
       <div class="center col s12 m6 offset-m1">
-        <p class="bold" style="font-size:30px; margin-top:50px;">Teaching Assistant, Fundamentals of Programming and Computer Science</p>
-        <p class="light" style="font-size:20px; margin-top:15px;">15-112 teaches introductory programming in Python, covering a wide range of material, from efficiency analysis to object-oriented programming to recursion.  I do everything from leading recitations and review sessions, to holding office hours, to grading homeworks and exams.  The experience I've gained through this position, and the interactions I've had with students, other TAs, and professors alike, have been invaluable.</p>
+        <p class="bold" style="font-size:30px">This summer: Research at the Social Computing Lab in CMU's Human-Computer Interaction Institute, and TAing 15-122</p>
+      </div>
+      <div class="center col s12 m2 offset-m1">
+        <img src="At-sign.png" class="circle">
+      </div>
+    </div>
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m4">
+        <img src="112-dragon.png" class="circle">
+      </div>
+      <div class="center col s12 m4">
+        <p class="bold" style="font-size:30px">Teaching Assistant, Fundamentals of Programming and Computer Science</p>
+        <p class="light" style="font-size:20px">15-112 teaches introductory programming in Python, covering a wide range of material, from efficiency analysis to object-oriented programming to recursion.  I do everything from leading recitations and review sessions, to holding office hours, to grading homeworks and exams.  The experience I've gained through this position, and the interactions I've had with students, other TAs, and professors alike, have been invaluable.</p>
+      </div>
+      <div class="col s12 m4">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Jan 2015</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="center col s12 m2">
+        <img src="112-dragon.png" class="circle" style="margin-top:50px">
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px">Teaching Assistant, Fundamentals of Programming and Computer Science</p>
+        <p class="light" style="font-size:20px">15-112 teaches introductory programming in Python, covering a wide range of material, from efficiency analysis to object-oriented programming to recursion.  I do everything from leading recitations and review sessions, to holding office hours, to grading homeworks and exams.  The experience I've gained through this position, and the interactions I've had with students, other TAs, and professors alike, have been invaluable.</p>
       </div>
       <div class="col s12 m2 offset-m1">
         <p class="center thin cyan-text text-darken-3" style="font-size:30px">Jan 2015</p>
       </div>
     </div>
-    <div class="row valign-wrapper">
-      <div class="col s12 m2">
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m4">
         <img src="ms.png" class="circle">
       </div>
-      <div class="center col s12 m6 offset-m1">
-        <p class="bold" style="font-size:30px; margin-top:50px;">Microsoft Consultant at Best Buy</p>
-        <p class="light" style="font-size:20px; margin-top:15px;">A few months after starting my job at Best Buy, I was asked to represent Microsoft as a Microsoft Consultant in the new mini-store.  I received special training in Microsoft products, and provided customers with Windows- and Microsoft-specific advice and information.  I sold primarily Windows-based computers and tablets (yay Surface!).  As a team with the two other Microsoft Consultants in my store, we ranked among the top 20 in the entire company (with over 600 stores that had MS mini-stores) based on sales performance.</p>
+      <div class="center col s12 m4">
+        <p class="bold" style="font-size:30px">Microsoft Consultant at Best Buy</p>
+        <p class="light" style="font-size:20px">A few months after starting my job at Best Buy, I was asked to represent Microsoft as a Microsoft Consultant in the new mini-store.  I received special training in Microsoft products, and provided customers with Windows- and Microsoft-specific advice and information.  I sold primarily Windows-based computers and tablets (yay Surface!).  As a team with the two other Microsoft Consultants in my store, we ranked among the top 20 in the entire company (with over 600 stores that had MS mini-stores) based on sales performance.</p>
       </div>
-      <div class="col s12 m2 offset-m1">
+      <div class="center col s12 m4">
         <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2014</p>
         <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2013</p>
       </div>
     </div>
-    <div class="row valign-wrapper">
-      <div class="col s12 m2">
-        <img src="Best-Buy.jpg" class="circle">
+    <div class="row hide-on-med-and-up">
+      <div class="center col s12 m2">
+        <img src="ms.png" class="circle" style="margin-top:50px">
       </div>
       <div class="center col s12 m6 offset-m1">
-        <p class="bold" style="font-size:30px; margin-top:50px;">Computers and Tablets Sales Associate at Best Buy</p>
-        <p class="light" style="font-size:20px; margin-top:15px;">In this position, I advised on and sold all types of tablets, desktops, and laptops, as well as accessories and networking products, to hundreds of customers.  Being my first retail job, I got to learn how things work "behind the scenes".  I also gained a lot of experience in customer interaction, and ended up meeting a lot of really awesome people!</p>
+        <p class="bold" style="font-size:30px">Microsoft Consultant at Best Buy</p>
+        <p class="light" style="font-size:20px">A few months after starting my job at Best Buy, I was asked to represent Microsoft as a Microsoft Consultant in the new mini-store.  I received special training in Microsoft products, and provided customers with Windows- and Microsoft-specific advice and information.  I sold primarily Windows-based computers and tablets (yay Surface!).  As a team with the two other Microsoft Consultants in my store, we ranked among the top 20 in the entire company (with over 600 stores that had MS mini-stores) based on sales performance.</p>
       </div>
-      <div class="col s12 m2 offset-m1">
+      <div class="center col s12 m2 offset-m1">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2014</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2013</p>
+      </div>
+    </div>
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m4">
+        <img src="Best-Buy.jpg" class="circle">
+      </div>
+      <div class="center col s12 m4">
+        <p class="bold" style="font-size:30px">Computers and Tablets Sales Associate at Best Buy</p>
+        <p class="light" style="font-size:20px">In this position, I advised on and sold all types of tablets, desktops, and laptops, as well as accessories and networking products, to hundreds of customers.  Being my first retail job, I got to learn how things work "behind the scenes".  I also gained a lot of experience in customer interaction, and ended up meeting a lot of really awesome people!</p>
+      </div>
+      <div class="center col s12 m4">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2013</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Jun 2013</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="center col s12 m2">
+        <img src="Best-Buy.jpg" class="circle" style="margin-top:50px">
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px">Computers and Tablets Sales Associate at Best Buy</p>
+        <p class="light" style="font-size:20px">In this position, I advised on and sold all types of tablets, desktops, and laptops, as well as accessories and networking products, to hundreds of customers.  Being my first retail job, I got to learn how things work "behind the scenes".  I also gained a lot of experience in customer interaction, and ended up meeting a lot of really awesome people!</p>
+      </div>
+      <div class="center col s12 m2 offset-m1">
         <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2013</p>
         <p class="center thin cyan-text text-darken-3" style="font-size:30px">Jun 2013</p>
       </div>
@@ -225,9 +282,21 @@
     <div class="parallax"><img src="pghp2.jpg"></div>
   </div>
 
-  <div id="projects" class="section scrollspy container no-pad-bot">
+  <div id="projects" class="section scrollspy container">
     <h2 class="center cyan-text text-darken-3" style="margin-top:55px">Projects</h2>
-    <div class="row valign-wrapper">
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="col s12 m4">
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/txXlyLabw-Y" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+        <div class="center col s12 m6 offset-m1">
+          <p class="bold" style="font-size:30px; margin-top:50px;">Perfect Produce Picker</p>
+          <p class="thin cyan-text text-darken-3" style="font-size:25px; margin-top:15px;">December 2014</p>
+          <p class="light" style="font-size:20px; margin-top:15px;">This was my term project for 15-112 when I took it in Fall 2014.  It is a database creation and location system made in Python.  It uses Tesseract OCR, the Leap Motion, and OpenCV.</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
       <div class="col s12 m4">
         <div class="video-container">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/txXlyLabw-Y" frameborder="0" allowfullscreen></iframe>
@@ -246,15 +315,23 @@
     <div class="parallax"><img src="hunt.JPG"></div>
   </div>
 
-  <div id="resume" class="center section scrollspy container">
+  <div id="resume" class="center section scrollspy">
     <h2 class="center cyan-text text-darken-3">Resume</h2>
     <a class="waves-effect waves-light btn cyan-darken-3" href="https://cmu.box.com/s/49kyq7yarr6swlj9hvc1qwk55993phqy">Click me!</a>
-    <div class="row valign-wrapper">
-      <div class="col s12 m3">
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="col s12 m4 offset-m2">
         <img src="jkorn.jpg" class="circle center">
       </div>
+      <div class="col s12 m4">
+        <p class="light" style="font-size:32px">Thanks for looking through my website - feel free to reach out to me!</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="col s12 m3">
+        <img src="jkorn.jpg" class="circle center" style="margin-top:50px">
+      </div>
       <div class="col s12 m9">
-        <p class="light" style="font-size:30px; margin-top:50px;">Thanks for taking the time to look through my website! Feel free to reach out to me - my contact details can be found below.</p>
+        <p class="light" style="font-size:30px">Thanks for taking the time to look through my website! Feel free to reach out to me - my contact details can be found below.</p>
       </div>
     </div>
   </div>
