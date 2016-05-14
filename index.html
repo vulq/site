@@ -6,12 +6,18 @@
   <meta name="theme-color" content="#00838f"/>
   <title>Josh Korn</title>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"> -->
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+  <script type="text/javascript" src="js/jquery.easy-pie-chart.js"></script>
+
+  <link href="css/jquery.easy-pie-chart.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="shortcut icon" href="http://i.imgur.com/QIhSLZ3.gif">
 </head>
 <body>
-  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="js/materialize.js"></script>
   <script>
   $(document).ready(function() {
@@ -21,6 +27,14 @@
       $('.collapsible').collapsible({
       accordion : false
       });
+      $('.chart').easyPieChart({
+        animate: 5000,
+        scaleColor: false,
+        size: 160,
+        lineWidth: 25,
+        lineCap: 'butt',
+        barColor: "#00838f"
+    });
   });
   </script>
   <nav>
@@ -61,7 +75,7 @@
     <div id="bio" class="section scrollspy container no-pad-bot">
       <div class="container"> 
           <h1 class="header center">Hi! I'm Josh.</h1>
-            <h5 class="center header col s12 light">I'm a sophomore ECE and CS major at CMU. I love computers - I've built them, sold them, and coded on them. I'm currently a TA for 15-112.</h5>
+            <h5 class="center header col s12 light">I'm a junior ECE and CS major at CMU. I love computers - I've built them, sold them, and coded on them. I'm currently a software engineer intern at Salesforce, and will be a TA for 15-251 in the fall.</h5>
       </div>
     </div>
     <div class="parallax"><img src="hamerschlag.jpg"></div>
@@ -69,41 +83,89 @@
   
   <div id="skills" class="section scrollspy no-pad-bot">
     <h2 class="center cyan-text text-darken-3">Skills</h2>
-    <div class="row">
-      <div class="col s12 m2 offset-m1 center">
-        <div class="icon-block">
-          <h2 class="center cyan-text text-darken-3"><i class="mdi-image-looks-one"></i></h2>
-          <h5 class="center">Python</h5>
-          <p class="light">I live and breathe Python.  Ok, not really.  But I do use it a lot. From homeworks to projects I've worked on to quick scripts, Python is my go-to language. 15-112, the class that I am a TA for, is also taught in Python. I also have web development experience using Flask, a Python backend framework.</p>
+    <div class="hide-on-small-and-down">
+      <div class="center row">
+        <div class="col s6 m3 center">          
+            <div class="chart center-block" data-percent="90"><span style="font-size: 25px">Python</span></div>
+
+            <p class="light">Including Flask.</p>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="80"><span style="font-size: 25px">C</span></div>
+        </div>
+        <div class="col s6 m3 center">
+            <div class="chart center-block" data-percent="70"><span style="font-size: 25px">Web</span></div>
+            <p class="light">HTML, CSS, JS.</p>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="60"><span style="font-size: 25px">Adobe</span></div>
+          <p class="light">Photoshop, InDesign.</p>
+        </div>
+        <div class="col s6 m3 center">
+            <div class="chart center-block" data-percent="55"><span style="font-size: 25px">SML</span></div>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="50"><span style="font-size: 25px">SQL</span></div>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="40"><span style="font-size: 15px">SystemVerilog</span></div>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="30"><span style="font-size: 25px">MATLAB</span></div>
         </div>
       </div>
-      <div class="col s12 m2 center">
-        <div class="icon-block">
-          <h2 class="center cyan-text text-darken-3"><i class="mdi-image-looks-two"></i></h2>
-          <h5 class="center">C</h5>
-          <p class="light">Experience with C is currently limited to coursework. Knowledge of basic algorithms and data structure implementations, as well as some systems-level programming. The class that I was a TA for this past summer, 15-122, is taught in C.</p>
+      <div class="center row container">
+        <div class="col s12 center">
+            <h5 class="center">Other</h5>
+            <p class="light">Experience with x86-64 and AVR Assembly, Git, SVN, and LaTeX.
+            Built multiple desktop computers. Currently learning Go.</p>
+          </div>
         </div>
       </div>
-      <div class="col s12 m2 center">
-        <div class="icon-block">
-          <h2 class="center cyan-text text-darken-3"><i class="mdi-image-looks-3"></i></h2>
-          <h5 class="center">Web</h5>
-          <p class="light">HTML, CSS, JavaScript. Experience in particular with the Materialize CSS framework, Flask, jQuery, and AJAX.</p>
+    </div>
+    <div class="hide-on-med-and-up">
+      <div class="center row">
+        <div class="col s6 center">          
+            <div class="chart center-block" data-percent="90"><span style="font-size: 25px">Python</span></div>
+
+            <p class="light">Including Flask.</p>
+        </div>
+        <div class="col s6 center">
+          <div class="chart center-block" data-percent="80"><span style="font-size: 25px">C</span></div>
         </div>
       </div>
-      <div class="col s12 m2 center">
-        <div class="icon-block">
-          <h2 class="center cyan-text text-darken-3"><i class="mdi-image-looks-4"></i></h2>
-          <h5 class="center">Adobe</h5>
-          <p class="light">Years of experience with Photoshop, projects ranging from desktop backgrounds to forum signatures to logos to image touchups.  Used InDesign to create high school newspaper layout.</p>
+      <div class="center row">
+        <div class="col s6 center">
+            <div class="chart center-block" data-percent="70"><span style="font-size: 25px">Web</span></div>
+            <p class="light">HTML, CSS, JS.</p>
+        </div>
+        <div class="col s6 center">
+          <div class="chart center-block" data-percent="60"><span style="font-size: 25px">Adobe</span></div>
+          <p class="light">Photoshop, InDesign.</p>
         </div>
       </div>
-      <div class="col s12 m2 center">
-        <div class="icon-block">
-          <h2 class="center cyan-text text-darken-3"><i class="mdi-image-looks-5"></i></h2>
-          <h5 class="center">Other</h5>
-          <p class="light">Proficiency in Microsoft Office. Experience with AVR Assembly, MySQL, Git, Subversion, JSON, and LaTeX.
-          Built multiple desktop computers.</p>
+      <div class="center row">
+        <div class="col s6 m3 center">
+            <div class="chart center-block" data-percent="55"><span style="font-size: 25px">SML</span></div>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="50"><span style="font-size: 25px">SQL</span></div>
+        </div>
+      </div>
+      <div class="center row">
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="40"><span style="font-size: 15px">SystemVerilog</span></div>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="30"><span style="font-size: 25px">MATLAB</span></div>
+        </div>
+      </div>
+      <div class="center row container">
+        <div class="col s12 center">
+            <h5 class="center">Other</h5>
+            <p class="light">Experience with x86-64 and AVR Assembly, Git, SVN, and LaTeX.
+            Built multiple desktop computers. Currently learning Go.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -123,8 +185,6 @@
       <div class="center col s12 m4">
         <p class="center condensed light" style="font-size:20px">Major: Electrical and Computer Engineering (Software Track)</p>
         <p class="center condensed light" style="font-size:20px">Double Major (Anticipated): Computer Science</p>
-        <p class="center condensed light" style="font-size:20px">Fall '15 GPA: 4.00</p>
-        <p class="center condensed light" style="font-size:15px; margin-top:-20px;">Cumulative GPA: 3.9</p>
       </div>
       <div class="center col s12 m4">
         <img src="uc-front.jpg" class="circle">
@@ -133,37 +193,7 @@
     <div class="container hide-on-small-and-down">
       <div class="row">
         <div class="col s12 m8 offset-m2">
-          <h5 class="center">Previous Relevant Coursework</h5>
-          <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
-            <li>
-              <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Great Theoretical Ideas in CS</div>
-              <div class="collapsible-body"><p>This course is about how to use theoretical ideas to formulate and solve problems in computer science. It integrates mathematical material with general problem solving techniques and computer science applications.  Topics include: algorithms, complexity theory, game theory, probability theory, graph theory, automata theory, algebra, cryptography, and combinatorics.</p></div>
-            </li>
-            <li>
-              <div class="collapsible-header"><i class="mdi-image-filter-2"></i>Intro to Computer Systems</div>
-              <div class="collapsible-body"><p>This course teaches the basic concepts underlying all computer systems - topics range from assembly to memory management to network protocols.  This class is taught in C and x86 Assembly.</p></div>
-            </li>
-            <li>
-              <div class="collapsible-header"><i class="mdi-image-filter-3"></i>Principles of Imperative Computation</div>
-              <div class="collapsible-body"><p>This is the class that I was a TA for this past summer.  Covers correctness of programs, and basic data structures and algorithms.  The course is taught in C.</p></div>
-            </li>
-            <li>
-              <div class="collapsible-header"><i class="mdi-image-filter-4"></i>Fundamentals of Programming</div>
-              <div class="collapsible-body"><p>Also known as 15-112 - this is the class I am currently a TA for.  I went into the class
-              with barely any programming knowledge, and came out being able to make the project that you can view below.  It's one of the most amazing courses at CMU, hands down.</p></div>
-            </li>
-            <li>
-              <div class="collapsible-header"><i class="mdi-image-filter-5"></i>Intro to ECE</div>
-              <div class="collapsible-body"><p>This class goes over all of the main topics in Electrical and Computer Engineering.  Everything from hardware to digital logic, from diodes to MOSFETs to muxes.</p></div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="container hide-on-small-and-down">
-      <div class="row" style="margin-top:-20px;">
-        <div class="col s12 m8 offset-m2">
-          <h5 class="center">Current Relevant Coursework</h5>
+          <h5 class="center">Recent Relevant Coursework</h5>
           <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
             <li>
               <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Principles of Functional Programming</div>
@@ -173,6 +203,24 @@
               <div class="collapsible-header"><i class="mdi-image-filter-2"></i>Structure and Design of Digital Systems</div>
               <div class="collapsible-body"><p>This course introduces basic issues in design and verification of modern digital systems.</p></div>
             </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-3"></i>Great Theoretical Ideas in CS</div>
+              <div class="collapsible-body"><p>This course is about how to use theoretical ideas to formulate and solve problems in computer science. It integrates mathematical material with general problem solving techniques and computer science applications.  Topics include: algorithms, complexity theory, game theory, probability theory, graph theory, automata theory, algebra, cryptography, and combinatorics.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-4"></i>Intro to Computer Systems</div>
+              <div class="collapsible-body"><p>This course teaches the basic concepts underlying all computer systems - topics range from assembly to memory management to network protocols.  This class is taught in C and x86 Assembly.</p></div>
+            </li>
+      
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container hide-on-small-and-down">
+      <div class="row" style="margin-top:-20px;">
+        <div class="col s12 m8 offset-m2">
+          <h5 class="center">Current Relevant Coursework</h5>
+          <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
           </ul>
         </div>
       </div>
@@ -180,37 +228,7 @@
     <div class="container hide-on-med-and-up">
       <div class="row">
         <div class="col s12 m8 offset-m2">
-          <h5 class="center">Previous Relevant Coursework</h5>
-          <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
-            <li>
-              <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Great Theoretical Ideas in CS</div>
-              <div class="collapsible-body"><p>This course is about how to use theoretical ideas to formulate and solve problems in computer science. It integrates mathematical material with general problem solving techniques and computer science applications.  Topics include: algorithms, complexity theory, game theory, probability theory, graph theory, automata theory, algebra, cryptography, and combinatorics.</p></div>
-            </li>
-            <li>
-              <div class="collapsible-header"><i class="mdi-image-filter-2"></i>Intro to Computer Systems</div>
-              <div class="collapsible-body"><p>This course teaches the basic concepts underlying all computer systems - topics range from assembly to memory management to network protocols.  This class is taught in C and x86 Assembly.</p></div>
-            </li>
-            <li>
-              <div class="collapsible-header"><i class="mdi-image-filter-3"></i>Princ. of Imperative Comp.</div>
-              <div class="collapsible-body"><p>This is the class that I was a TA for this past summer.  Covers correctness of programs, and basic data structures and algorithms.  The course is taught in C.</p></div>
-            </li>
-            <li>
-              <div class="collapsible-header"><i class="mdi-image-filter-4"></i>Fund. of Programming</div>
-              <div class="collapsible-body"><p>Also known as 15-112 - this is the class I am currently a TA for.  I went into the class
-              with barely any programming knowledge, and came out being able to make the project that you can view below.  It's one of the most amazing courses at CMU, hands down.</p></div>
-            </li>
-            <li>
-              <div class="collapsible-header"><i class="mdi-image-filter-5"></i>Intro to ECE</div>
-              <div class="collapsible-body"><p>This class goes over all of the main topics in Electrical and Computer Engineering.  Everything from hardware to digital logic, from diodes to MOSFETs to muxes.</p></div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="container hide-on-med-and-up">
-      <div class="row" style="margin-top:-20px;">
-        <div class="col s12 m8 offset-m2">
-          <h5 class="center">Current Relevant Coursework</h5>
+          <h5 class="center">Recent Relevant Coursework</h5>
           <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
             <li>
               <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Princ. of Functional Prog.</div>
@@ -220,6 +238,24 @@
               <div class="collapsible-header"><i class="mdi-image-filter-2"></i>Digital Systems</div>
               <div class="collapsible-body"><p>This course introduces basic issues in design and verification of modern digital systems.</p></div>
             </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-3"></i>Great Theoretical Ideas in CS</div>
+              <div class="collapsible-body"><p>This course is about how to use theoretical ideas to formulate and solve problems in computer science. It integrates mathematical material with general problem solving techniques and computer science applications.  Topics include: algorithms, complexity theory, game theory, probability theory, graph theory, automata theory, algebra, cryptography, and combinatorics.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-4"></i>Intro to Computer Systems</div>
+              <div class="collapsible-body"><p>This course teaches the basic concepts underlying all computer systems - topics range from assembly to memory management to network protocols.  This class is taught in C and x86 Assembly.</p></div>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container hide-on-med-and-up">
+      <div class="row" style="margin-top:-20px;">
+        <div class="col s12 m8 offset-m2">
+          <h5 class="center">Current Relevant Coursework</h5>
+          <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
           </ul>
         </div>
       </div>
@@ -240,7 +276,7 @@
         <p class="bold" style="font-size:30px">Software Engineer Intern, Compute Infrastructure</p>
       </div>
       <div class="col s12 m4">
-        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Summer 2016</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2016</p>
       </div>
     </div>
     <div class="row hide-on-med-and-up">
@@ -251,7 +287,7 @@
         <p class="bold" style="font-size:30px">Software Engineer Intern, Compute Infrastructure</p>
       </div>
       <div class="col s12 m2 offset-m1">
-        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Summer 2016</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2016</p>
       </div>
     </div>
 
@@ -261,9 +297,10 @@
       </div>
       <div class="center col s12 m4">
         <p class="bold" style="font-size:30px">Teaching Assistant, Fundamentals of Programming and Computer Science</p>
-        <p class="light" style="font-size:20px">15-112 teaches introductory programming in Python, covering a wide range of material, from efficiency analysis to object-oriented programming to recursion.  I do everything from leading recitations and review sessions, to holding office hours, to grading homeworks and exams.  The experience I've gained through this position, and the interactions I've had with students, other TAs, and professors alike, have been invaluable.</p>
+        <p class="light" style="font-size:20px">15-112 teaches introductory programming in Python, covering a wide range of material, from efficiency analysis to object-oriented programming to recursion.  I did everything from leading recitations and review sessions, to holding office hours, to grading homeworks and exams.  The experience I've gained through this position, and the interactions I've had with students, other TAs, and professors alike, have been invaluable.</p>
       </div>
       <div class="col s12 m4">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2016</p>
         <p class="center thin cyan-text text-darken-3" style="font-size:30px">Jan 2015</p>
       </div>
     </div>
@@ -273,9 +310,10 @@
       </div>
       <div class="center col s12 m6 offset-m1">
         <p class="bold" style="font-size:30px">Teaching Assistant, Fundamentals of Programming and Computer Science</p>
-        <p class="light" style="font-size:20px">15-112 teaches introductory programming in Python, covering a wide range of material, from efficiency analysis to object-oriented programming to recursion.  I do everything from leading recitations and review sessions, to holding office hours, to grading homeworks and exams.  The experience I've gained through this position, and the interactions I've had with students, other TAs, and professors alike, have been invaluable.</p>
+        <p class="light" style="font-size:20px">15-112 teaches introductory programming in Python, covering a wide range of material, from efficiency analysis to object-oriented programming to recursion.  I did everything from leading recitations and review sessions, to holding office hours, to grading homeworks and exams.  The experience I've gained through this position, and the interactions I've had with students, other TAs, and professors alike, have been invaluable.</p>
       </div>
       <div class="col s12 m2 offset-m1">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2016</p>
         <p class="center thin cyan-text text-darken-3" style="font-size:30px">Jan 2015</p>
       </div>
     </div>
@@ -286,7 +324,7 @@
       </div>
       <div class="center col s12 m4">
         <p class="bold" style="font-size:30px">Research Assistant, Human-Computer Interaction Institute, Social Computing Lab</p>
-        <p class="light" style="font-size:20px">This past summer, as part of the Social Cybersecurity project, I created an online quiz, which you can find out more about below.  Being my first major web (and research) project, I gained a lot of web development and research experience.</p>
+        <p class="light" style="font-size:20px">Last summer, as part of the Social Cybersecurity project, I created an online quiz, which you can find out more about below.  Being my first major web (and research) project, I gained a lot of web development and research experience.</p>
       </div>
       <div class="col s12 m4">
         <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2015</p>
@@ -299,7 +337,7 @@
       </div>
       <div class="center col s12 m6 offset-m1">
         <p class="bold" style="font-size:30px">Research Assistant, Human-Computer Interaction Institute, Social Computing Lab</p>
-        <p class="light" style="font-size:20px">This past summer, as part of the Social Cybersecurity project, I created an online quiz, which you can find out more about below.  Being my first major web (and research) project, I gained a lot of web development and research experience.</p>
+        <p class="light" style="font-size:20px">Last summer, as part of the Social Cybersecurity project, I created an online quiz, which you can find out more about below.  Being my first major web (and research) project, I gained a lot of web development and research experience.</p>
       </div>
       <div class="col s12 m2 offset-m1">
         <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2015</p>
@@ -313,7 +351,7 @@
       </div>
       <div class="center col s12 m4">
         <p class="bold" style="font-size:30px">Teaching Assistant, Principles of Imperative Computation</p>
-        <p class="light" style="font-size:20px">15-122 teaches imperative programming in C, covering topics from proving function correctness to basic algorithms and data structures.  Just like with 112, I did everything from leading labs and recitations to grading.  This was an awesome opportunity to get to TA for different professors and see how another class is run.  I also got the opportunity to manage the entire course on Autolab, and created exam questions in LaTeX.</p>
+        <p class="light" style="font-size:20px">15-122 teaches imperative programming in C, covering topics from proving function correctness to basic algorithms and data structures.  Just like with 112, I did everything from leading labs and recitations to grading.  I also got the opportunity to manage the entire course on Autolab, and created exam questions in LaTeX.</p>
       </div>
       <div class="col s12 m4">
         <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2015</p>
@@ -326,7 +364,7 @@
       </div>
       <div class="center col s12 m6 offset-m1">
         <p class="bold" style="font-size:30px">Teaching Assistant, Principles of Imperative Computation</p>
-        <p class="light" style="font-size:20px">15-122 teaches imperative programming in C, covering topics from proving function correctness to basic algorithms and data structures.  Just like with 112, I did everything from leading labs and recitations to grading.  This was an awesome opportunity to get to TA for different professors and see how another class is run.  I also got the opportunity to manage the entire course on Autolab, and created exam questions in LaTeX.</p>
+        <p class="light" style="font-size:20px">15-122 teaches imperative programming in C, covering topics from proving function correctness to basic algorithms and data structures.  Just like with 112, I did everything from leading labs and recitations to grading.  I also got the opportunity to manage the entire course on Autolab, and created exam questions in LaTeX.</p>
       </div>
       <div class="col s12 m2 offset-m1">
         <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2015</p>
