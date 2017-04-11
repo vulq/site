@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="theme-color" content="#00838f"/>
+  <title>Josh Korn</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"> -->
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+  <script type="text/javascript" src="js/jquery.easy-pie-chart.js"></script>
+
+  <link href="css/jquery.easy-pie-chart.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="shortcut icon" href="http://i.imgur.com/QIhSLZ3.gif">
+</head>
+<body>
+  <script src="js/materialize.js"></script>
+  <script>
+  $(document).ready(function() {
+      $(".button-collapse").sideNav();
+      $('.scrollspy').scrollSpy();
+      $('.parallax').parallax();
+      $('.collapsible').collapsible({
+      accordion : false
+      });
+      $('.chart').easyPieChart({
+        animate: 5000,
+        scaleColor: false,
+        size: 160,
+        lineWidth: 25,
+        lineCap: 'butt',
+        barColor: "#00838f"
+    });
+  });
+  </script>
+  <nav>
+    <div class="nav-wrapper hide-on-small-and-down">
+      <div class="navbar-fixed">
+        <nav class="white">
+          <div class="center row">
+            <div class="col s12" style="margin-top:-12px;">
+              <ul class="section table-of-contents hide-on-small-and-down">
+                <li class="col m2"><a href="#bio">Me</a></li>
+                <li class="col m2"><a href="#skills">Skills</a></li>
+                <li class="col m2"><a href="#education">Education</a></li>
+                <li class="col m2"><a href="#experience">Experience</a></li>
+                <li class="col m2"><a href="#projects">Projects</a></li>
+                <li class="col m2"><a href="#resume">Resume</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="nav-wrapper hide-on-med-and-up">
+      <a class="brand-logo hide-on-med-and-up cyan-text text-darken-3">Josh</a>
+      <div class="navbar">
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="hide-on-med-and-up mdi-navigation-menu"></i></a>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="#bio" class="cyan-text text-darken-3">Me</a></li>
+          <li><a href="#skills" class="cyan-text text-darken-3">Skills</a></li>
+          <li><a href="#education" class="cyan-text text-darken-3">Education</a></li>
+          <li><a href="#experience" class="cyan-text text-darken-3">Experience</a></li>
+          <li><a href="#projects" class="cyan-text text-darken-3">Projects</a></li>
+          <li><a href="#resume" class="cyan-text text-darken-3">Resume</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="index-banner" class="parallax-container valign-wrapper">
+    <div id="bio" class="section scrollspy container no-pad-bot">
+      <div class="container"> 
+          <h1 class="header center" style="text-shadow:
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;">Hi! I'm Josh.</h1>
+            <h5 class="center header col s12" style="text-shadow:
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;">PROJECT PROPOSAL COMING SOON</h5>
+      </div>
+    </div>
+    <div class="parallax"><img src="hamerschlag.jpg"></div>
+  </div>
+  
+  <div id="skills" class="section scrollspy no-pad-bot">
+    <h2 class="center cyan-text text-darken-3">Skills</h2>
+    <div class="hide-on-small-and-down">
+      <div class="center row">
+        <div class="col s6 m3 center">          
+            <div class="chart center-block" data-percent="90"><span style="font-size: 25px">Python</span></div>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="80"><span style="font-size: 25px">C/C++</span></div>
+        </div>
+        <div class="col s6 m3 center">
+            <div class="chart center-block" data-percent="70"><span style="font-size: 25px">Web</span></div>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="65"><span style="font-size: 25px">SML</span></div>
+        </div>
+        <div class="col s6 m3 center">
+            <div class="chart center-block" data-percent="60"><span style="font-size: 25px">Go</span></div>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="50"><span style="font-size: 15px">SystemVerilog</span></div>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="40"><span style="font-size: 25px">SQL</span></div>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="30"><span style="font-size: 25px">MATLAB</span></div>
+        </div>
+      </div>
+      <div class="center row container">
+        <div class="col s12 center">
+            <h5 class="center">Other</h5>
+            <p class="light">Experience with x86-64 and AVR Assembly, Git, SVN, and LaTeX, as well as Adobe Photoshop and InDesign. Built multiple desktop computers. Python experience includes backend development with Flask. Web experience includes HTML, CSS, and JavaScript.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hide-on-med-and-up">
+      <div class="center row">
+        <div class="col s6 center">          
+            <div class="chart center-block" data-percent="90"><span style="font-size: 25px">Python</span></div>
+        </div>
+        <div class="col s6 center">
+          <div class="chart center-block" data-percent="80"><span style="font-size: 25px">C/C++</span></div>
+        </div>
+      </div>
+      <div class="center row">
+        <div class="col s6 center">
+            <div class="chart center-block" data-percent="70"><span style="font-size: 25px">Web</span></div>
+        </div>
+        <div class="col s6 center">
+          <div class="chart center-block" data-percent="65"><span style="font-size: 25px">SML</span></div>
+        </div>
+      </div>
+      <div class="center row">
+        <div class="col s6 m3 center">
+            <div class="chart center-block" data-percent="60"><span style="font-size: 25px">Go</span></div>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="50"><span style="font-size: 15px">SystemVerilog</span></div>
+        </div>
+      </div>
+      <div class="center row">
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="40"><span style="font-size: 25px">SQL</span></div>
+        </div>
+        <div class="col s6 m3 center">
+          <div class="chart center-block" data-percent="30"><span style="font-size: 25px">MATLAB</span></div>
+        </div>
+      </div>
+      <div class="center row container">
+        <div class="col s12 center">
+            <h5 class="center">Other</h5>
+            <p class="light">Experience with x86-64 and AVR Assembly, Git, SVN, and LaTeX, as well as Adobe Photoshop and InDesign. Built multiple desktop computers. Python experience includes backend development with Flask. Web experience includes HTML, CSS, and JavaScript.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="rsz_gates.jpg"></div>
+  </div>
+
+  <div id="education" class="section scrollspy no-pad-bot">
+    <h2 class="center cyan-text text-darken-3">Education</h2>
+    <h4 class="center">Carnegie Mellon University</h4>
+    <div class="row">
+      <div class="center col s12 m4">
+        <img src="CMU_Hamerschlag_Hall2.jpg" class="circle">
+      </div>
+      <div class="center col s12 m4">
+        <p class="center condensed light" style="font-size:20px">Major: Electrical and Computer Engineering (Software Track)</p>
+        <p class="center condensed light" style="font-size:20px">Double Major: Computer Science</p>
+      </div>
+      <div class="center col s12 m4">
+        <img src="uc-front.jpg" class="circle">
+      </div>
+    </div>
+    <div class="container hide-on-small-and-down">
+      <div class="row" style="margin-top:-20px;">
+        <div class="col s12 m8 offset-m2">
+          <h5 class="center">Current Relevant Coursework</h5>
+          <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
+            <!-- <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Embedded Real-Time Systems</div>
+              <div class="collapsible-body"><p>This is an embedded systems programming course - it covers the integrated hardware and software aspects of embedded processor architectures, along with advanced topics such as concurrency, real-time principles, and memory management.</p></div>
+            </li> -->
+            <li class="hide-on-med-only">
+              <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Parallel Computer Architecture and Programming</div>
+              <div class="collapsible-body"><p>This course covers the fundamental principles and engineering tradeoffs involved in designing modern parallel computers, as well as the programming techniques to effectively utilize these machines. Topics include naming shared data, synchronizing threads, and the latency and bandwidth associated with communication.</p></div>
+            </li>
+            <li class="hide-on-large-only">
+              <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Parallel Comp. Arch. and Prog.</div>
+              <div class="collapsible-body"><p>This course covers the fundamental principles and engineering tradeoffs involved in designing modern parallel computers, as well as the programming techniques to effectively utilize these machines. Topics include naming shared data, synchronizing threads, and the latency and bandwidth associated with communication.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-2"></i>Algorithm Design and Analysis</div>
+              <div class="collapsible-body"><p>This course is about the design and analysis of algorithms. Specific algorithms for a variety of problems, as well as general design and analysis techniques are studied.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container hide-on-small-and-down">
+      <div class="row">
+        <div class="col s12 m8 offset-m2">
+          <h5 class="center">Recent Relevant Coursework</h5>
+          <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
+            <li class="hide-on-med-only">
+              <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Parallel and Sequential Data Structures and Algorithms</div>
+              <div class="collapsible-body"><p>This course is about about how to design, analyze, and program algorithms and data structures. The course emphasizes parallel algorithms and analysis, and how sequential algorithms can be considered a special case.</p></div>
+            </li>
+            <li class="hide-on-large-only">
+              <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Parallel and Seq. Data Struc. and Alg.</div>
+              <div class="collapsible-body"><p>This course is about about how to design, analyze, and program algorithms and data structures. The course emphasizes parallel algorithms and analysis, and how sequential algorithms can be considered a special case.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-2"></i>Structure and Design of Digital Systems</div>
+              <div class="collapsible-body"><p>This course introduces basic issues in design and verification of modern digital systems.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-3"></i>Great Theoretical Ideas in CS</div>
+              <div class="collapsible-body"><p>This course is about how to use theoretical ideas to formulate and solve problems in computer science. It integrates mathematical material with general problem solving techniques and computer science applications.  Topics include: algorithms, complexity theory, game theory, probability theory, graph theory, automata theory, algebra, cryptography, and combinatorics.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-4"></i>Intro to Computer Systems</div>
+              <div class="collapsible-body"><p>This course teaches the basic concepts underlying all computer systems - topics range from assembly to memory management to network protocols.  This class is taught in C and x86 Assembly.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container hide-on-med-and-up">
+      <div class="row" style="margin-top:-20px;">
+        <div class="col s12 m8 offset-m2">
+          <h5 class="center">Current Relevant Coursework</h5>
+          <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
+            <!-- <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Embedded Real-Time Systems</div>
+              <div class="collapsible-body"><p>This is an embedded systems programming course - it covers the integrated hardware and software aspects of embedded processor architectures, along with advanced topics such as concurrency, real-time principles, and memory management.</p></div>
+            </li> -->
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Parallel Comp. Arch. and Prog.</div>
+              <div class="collapsible-body"><p>This course covers the fundamental principles and engineering tradeoffs involved in designing modern parallel computers, as well as the programming techniques to effectively utilize these machines. Topics include naming shared data, synchronizing threads, and the latency and bandwidth associated with communication.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-2"></i>Algorithm Design and Analysis</div>
+              <div class="collapsible-body"><p>This course is about the design and analysis of algorithms. Specific algorithms for a variety of problems, as well as general design and analysis techniques are studied.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container hide-on-med-and-up">
+      <div class="row">
+        <div class="col s12 m8 offset-m2">
+          <h5 class="center">Recent Relevant Coursework</h5>
+          <ul class="collapsible" data-collapsible="accordion" style="margin-top:10px">
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-1"></i>Parallel and Seq. Data Struc. and Alg.</div>
+              <div class="collapsible-body"><p>This course is about about how to design, analyze, and program algorithms and data structures. The course emphasizes parallel algorithms and analysis, and how sequential algorithms can be considered a special case.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-2"></i>Digital Systems</div>
+              <div class="collapsible-body"><p>This course introduces basic issues in design and verification of modern digital systems.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-3"></i>Great Theoretical Ideas in CS</div>
+              <div class="collapsible-body"><p>This course is about how to use theoretical ideas to formulate and solve problems in computer science. It integrates mathematical material with general problem solving techniques and computer science applications.  Topics include: algorithms, complexity theory, game theory, probability theory, graph theory, automata theory, algebra, cryptography, and combinatorics.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="mdi-image-filter-4"></i>Intro to Computer Systems</div>
+              <div class="collapsible-body"><p>This course teaches the basic concepts underlying all computer systems - topics range from assembly to memory management to network protocols.  This class is taught in C and x86 Assembly.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="fence2.jpg"></div>
+  </div>
+
+  <div id="experience" class="section scrollspy no-pad-bot">
+    <h2 class="center cyan-text text-darken-3">Experience</h2>
+
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m4">
+        <img src="palantir.png" class="circle">
+      </div>
+      <div class="center col s12 m4">
+        <p class="bold" style="font-size:30px">Future Forward Deployed Software Engineer Intern at Palantir</p>
+      </div>
+      <div class="col s12 m4">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2017</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="center col s12 m2">
+        <img src="palantir.png" class="circle" style="margin-top:50px">
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px">Future Forward Deployed Software Engineer Intern at Palantir</p>
+      </div>
+      <div class="col s12 m2 offset-m1">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2017</p>
+      </div>
+    </div>
+
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m4">
+        <img src="pnp.jpg" class="circle">
+      </div>
+      <div class="center col s12 m4">
+        <p class="bold" style="font-size:30px">Teaching Assistant, Great Theoretical Ideas in Computer Science</p>
+        <p class="light" style="font-size:20px">This is a theoretical computer science course, that integrates mathematical material with computer science applications. Topics include complexity theory, graph theory, automata theory, and cryptography.</p>
+      </div>
+      <div class="col s12 m4">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2016</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="center col s12 m2">
+        <img src="pnp.jpg" class="circle" style="margin-top:50px">
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px">Teaching Assistant, Great Theoretical Ideas in Computer Science</p>
+        <p class="light" style="font-size:20px">This is a theoretical computer science course, that integrates mathematical material with computer science applications. Topics include complexity theory, graph theory, automata theory, and cryptography.</p>
+      </div>
+      <div class="col s12 m2 offset-m1">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2016</p>
+      </div>
+    </div>
+
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m4">
+        <img src="salesforce.png">
+      </div>
+      <div class="center col s12 m4">
+        <p class="bold" style="font-size:30px">Software Engineer Intern, Compute Infrastructure at Salesforce</p>
+        <p class="light" style="font-size:20px">I worked on a service, written in Go, that automates the process of triaging and remediating device and host failures. I also added functionality to an existing library to allow for host OS imaging and firmware upgrades. Being my first experience in industry, I also learned good coding practices, including proper code documentation and code reviews.</p>
+      </div>
+      <div class="col s12 m4">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2016</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2016</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="center col s12 m2">
+        <img src="salesforce.png" style="margin-top:50px">
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px">Software Engineer Intern, Compute Infrastructure at Salesforce</p>
+        <p class="light" style="font-size:20px">I worked on a service, written in Go, that automates the process of triaging and remediating device and host failures. I also added functionality to an existing library to allow for host OS imaging and firmware upgrades. Being my first experience in industry, I also learned good coding practices, including proper code documentation and code reviews.</p>
+      </div>
+      <div class="col s12 m2 offset-m1">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2016</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2016</p>
+      </div>
+    </div>
+
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m4">
+        <img src="112-dragon.png" class="circle">
+      </div>
+      <div class="center col s12 m4">
+        <p class="bold" style="font-size:30px">Teaching Assistant, Fundamentals of Programming and Computer Science</p>
+        <p class="light" style="font-size:20px">15-112 teaches introductory programming in Python, covering a wide range of material, from efficiency analysis to object-oriented programming to recursion.  I did everything from leading recitations and review sessions, to holding office hours, to grading homeworks and exams.  The experience I've gained through this position, and the interactions I've had with students, other TAs, and professors alike, have been invaluable.</p>
+      </div>
+      <div class="col s12 m4">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2016</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Jan 2015</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="center col s12 m2">
+        <img src="112-dragon.png" class="circle" style="margin-top:50px">
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px">Teaching Assistant, Fundamentals of Programming and Computer Science</p>
+        <p class="light" style="font-size:20px">15-112 teaches introductory programming in Python, covering a wide range of material, from efficiency analysis to object-oriented programming to recursion.  I did everything from leading recitations and review sessions, to holding office hours, to grading homeworks and exams.  The experience I've gained through this position, and the interactions I've had with students, other TAs, and professors alike, have been invaluable.</p>
+      </div>
+      <div class="col s12 m2 offset-m1">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2016</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Jan 2015</p>
+      </div>
+    </div>
+
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m4">
+        <img src="HCII_logo.svg.png" class="circle">
+      </div>
+      <div class="center col s12 m4">
+        <p class="bold" style="font-size:30px">Research Assistant, Human-Computer Interaction Institute, Social Computing Lab</p>
+        <p class="light" style="font-size:20px">Last summer, as part of the Social Cybersecurity project, I created an online quiz, which you can find out more about below.  Being my first major web (and research) project, I gained a lot of web development and research experience.</p>
+      </div>
+      <div class="col s12 m4">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2015</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2015</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="center col s12 m2">
+        <img src="HCII_logo.svg.png" class="circle" style="margin-top:50px">
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px">Research Assistant, Human-Computer Interaction Institute, Social Computing Lab</p>
+        <p class="light" style="font-size:20px">Last summer, as part of the Social Cybersecurity project, I created an online quiz, which you can find out more about below.  Being my first major web (and research) project, I gained a lot of web development and research experience.</p>
+      </div>
+      <div class="col s12 m2 offset-m1">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2015</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2015</p>
+      </div>
+    </div>
+    
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m4">
+        <img src="At-sign.png" class="circle">
+      </div>
+      <div class="center col s12 m4">
+        <p class="bold" style="font-size:30px">Teaching Assistant, Principles of Imperative Computation</p>
+        <p class="light" style="font-size:20px">15-122 teaches imperative programming in C, covering topics from proving function correctness to basic algorithms and data structures.  Just like with 112, I did everything from leading labs and recitations to grading.  I also got the opportunity to manage the entire course on Autolab, and created exam questions in LaTeX.</p>
+      </div>
+      <div class="col s12 m4">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2015</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2015</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="center col s12 m2">
+        <img src="At-sign.png" class="circle" style="margin-top:50px">
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px">Teaching Assistant, Principles of Imperative Computation</p>
+        <p class="light" style="font-size:20px">15-122 teaches imperative programming in C, covering topics from proving function correctness to basic algorithms and data structures.  Just like with 112, I did everything from leading labs and recitations to grading.  I also got the opportunity to manage the entire course on Autolab, and created exam questions in LaTeX.</p>
+      </div>
+      <div class="col s12 m2 offset-m1">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2015</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">May 2015</p>
+      </div>
+    </div>
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m4">
+        <img src="ms.png" class="circle">
+      </div>
+      <div class="center col s12 m4">
+        <p class="bold" style="font-size:30px">Microsoft Consultant at Best Buy</p>
+        <p class="light" style="font-size:20px">A few months after starting my job at Best Buy, I was asked to represent Microsoft as a Microsoft Consultant in the new mini-store.  I received special training in Microsoft products, and provided customers with Windows- and Microsoft-specific advice and information.  I sold primarily Windows-based computers and tablets (yay Surface!).  As a team with the two other Microsoft Consultants in my store, we ranked among the top 20 in the entire company (with over 600 stores that had MS mini-stores) based on sales performance.</p>
+      </div>
+      <div class="center col s12 m4">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2014</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2013</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="center col s12 m2">
+        <img src="ms.png" class="circle" style="margin-top:50px">
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px">Microsoft Consultant at Best Buy</p>
+        <p class="light" style="font-size:20px">A few months after starting my job at Best Buy, I was asked to represent Microsoft as a Microsoft Consultant in the new mini-store.  I received special training in Microsoft products, and provided customers with Windows- and Microsoft-specific advice and information.  I sold primarily Windows-based computers and tablets (yay Surface!).  As a team with the two other Microsoft Consultants in my store, we ranked among the top 20 in the entire company (with over 600 stores that had MS mini-stores) based on sales performance.</p>
+      </div>
+      <div class="center col s12 m2 offset-m1">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2014</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2013</p>
+      </div>
+    </div>
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m4">
+        <img src="Best-Buy.jpg" class="circle">
+      </div>
+      <div class="center col s12 m4">
+        <p class="bold" style="font-size:30px">Computers and Tablets Sales Associate at Best Buy</p>
+        <p class="light" style="font-size:20px">In this position, I advised on and sold all types of tablets, desktops, and laptops, as well as accessories and networking products, to hundreds of customers.  Being my first retail job, I got to learn how things work "behind the scenes".  I also gained a lot of experience in customer interaction, and ended up meeting a lot of really awesome people!</p>
+      </div>
+      <div class="center col s12 m4">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2013</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Jun 2013</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="center col s12 m2">
+        <img src="Best-Buy.jpg" class="circle" style="margin-top:50px">
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px">Computers and Tablets Sales Associate at Best Buy</p>
+        <p class="light" style="font-size:20px">In this position, I advised on and sold all types of tablets, desktops, and laptops, as well as accessories and networking products, to hundreds of customers.  Being my first retail job, I got to learn how things work "behind the scenes".  I also gained a lot of experience in customer interaction, and ended up meeting a lot of really awesome people!</p>
+      </div>
+      <div class="center col s12 m2 offset-m1">
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Aug 2013</p>
+        <p class="center thin cyan-text text-darken-3" style="font-size:30px">Jun 2013</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="pghp2.jpg"></div>
+  </div>
+
+  <div id="projects" class="section scrollspy no-pad-bot container">
+    <h2 class="center cyan-text text-darken-3">Projects</h2>
+    <div class="row valign-wrapper">
+      <div class="center col s12">
+        <p class="bold" style="font-size:30px; margin-top:50px;">TLDRit!</p>
+        <p class="thin cyan-text text-darken-3" style="font-size:25px; margin-top:15px;">February 2016</p>
+        <p class="light" style="font-size:20px; margin-top:15px;">This was a hackathon project I made with a few friends! It's a webapp that uses a second-order Markov chain to randomly generate a one sentence summary of restaurants, books, and CMU courses, based on reviews and descriptions! Since the text is randomly generated, it can be pretty nonsensical and hilarious sometimes!
+
+        Some technologies used include Flask and the Google Maps API. Check out the project at <a href="http://tldrit.xyz">TLDRit.xyz</a>!</p>
+      </div>
+    </div>
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="center col s12 m6">
+        <p class="bold" style="font-size:30px; margin-top:50px;">CyberQuiz</p>
+        <p class="thin cyan-text text-darken-3" style="font-size:25px; margin-top:15px;">Summer 2015</p>
+        <p class="light" style="font-size:20px; margin-top:15px;">This is the website that I made for my research at CMU's Human-Computer Interaction Institute. It's an online quiz that tests your cybersecurity knowledge, and provides interactive material and feedback along the way.  To make this, I used Flask, MySQL, the Materialize CSS framework, and jQuery.</p>
+      </div>
+      <div class="col s12 m4 offset-m1">
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/K394mQiUszA" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="col s12 m4">
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/K394mQiUszA" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px; margin-top:50px;">CyberQuiz</p>
+        <p class="thin cyan-text text-darken-3" style="font-size:25px; margin-top:15px;">Summer 2015</p>
+        <p class="light" style="font-size:20px; margin-top:15px;">This is the website that I made for my research at CMU's Human-Computer Interaction Institute. It's an online quiz that tests your cybersecurity knowledge, and provides interactive material and feedback along the way.  To make this, I used Flask, MySQL, the Materialize CSS framework, and jQuery.</p>
+      </div>
+    </div>
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="col s12 m4">
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/txXlyLabw-Y" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px; margin-top:50px;">Perfect Produce Picker</p>
+        <p class="thin cyan-text text-darken-3" style="font-size:25px; margin-top:15px;">December 2014</p>
+        <p class="light" style="font-size:20px; margin-top:15px;">This was my term project for 15-112 when I took it in Fall 2014.  It is a simple database, made in Python, that is controlled through hand gestures and camera input.  It uses Tesseract OCR, the Leap Motion, and OpenCV.</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="col s12 m4">
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/txXlyLabw-Y" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="center col s12 m6 offset-m1">
+        <p class="bold" style="font-size:30px; margin-top:50px;">Perfect Produce Picker</p>
+        <p class="thin cyan-text text-darken-3" style="font-size:25px; margin-top:15px;">December 2014</p>
+        <p class="light" style="font-size:20px; margin-top:15px;">This was my term project for 15-112 when I took it in Fall 2014.  It is a simple database, made in Python, that is controlled through hand gestures and camera input.  It uses Tesseract OCR, the Leap Motion, and OpenCV.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="hunt.JPG"></div>
+  </div>
+
+  <div id="resume" class="center section scrollspy">
+    <h2 class="center cyan-text text-darken-3">Resume</h2>
+    <a class="waves-effect waves-light btn cyan-darken-3" href="https://cmu.box.com/s/49kyq7yarr6swlj9hvc1qwk55993phqy">Click me!</a>
+    <div class="row valign-wrapper hide-on-small-and-down">
+      <div class="col s12 m4 offset-m2">
+        <img src="jkorn2.jpeg" class="circle center">
+      </div>
+      <div class="col s12 m4">
+        <p class="light" style="font-size:32px">Thanks for looking through my website - feel free to reach out to me!</p>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-up">
+      <div class="col s12 m3">
+        <img src="jkorn2.jpeg" class="circle center" style="margin-top:50px">
+      </div>
+      <div class="col s12 m9">
+        <p class="light" style="font-size:30px">Thanks for taking the time to look through my website! Feel free to reach out to me - my contact details can be found below.</p>
+      </div>
+    </div>
+  </div>
+  </body>
+
+  <footer class="center page-footer cyan darken-3">
+    <div class="container hide-on-small-and-down">
+      <div class="valign-wrapper row">
+        <div class="col s12 m3">
+          <a href="tel:973-879-6362"><i class="small mdi-communication-phone white-text"></i></a>
+          <a href="tel:973-879-6362"><p class="white-text">(973) 879-6362</p></a>
+        </div>
+        <div class="col s12 m3">
+          <a href="mailto:jkorn@cmu.edu"><i class="small mdi-communication-email white-text"></i></a>
+          <a href="mailto:jkorn@cmu.edu"><p class="white-text">jkorn@cmu.edu</p></a>
+        </div>
+        <div class="col s12 m3">
+          <a href="https://github.com/vulq"><img src="github-mark.png" style="margin-top:8px;"></a>
+          <a href="https://github.com/vulq"><p class="white-text"style="margin-top:21px;">vulq</p></a>
+        </div>
+        <div class="col s12 m3">
+          <a href="https://www.linkedin.com/in/jkorn21"><img src="social22.png" style="margin-top:8px;"></a>
+          <a href="https://www.linkedin.com/in/jkorn21"><p class="white-text"style="margin-top:21px;">jkorn21</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="container hide-on-med-and-up">
+      <div class="row">
+        <div class="col s12 m3">
+          <a href="tel:973-879-6362"><i class="small mdi-communication-phone white-text"></i></a>
+          <a href="tel:973-879-6362"><p class="white-text">(973) 879-6362</p></a>
+        </div>
+        <div class="col s12 m3">
+          <a href="mailto:jkorn@cmu.edu"><i class="small mdi-communication-email white-text"></i></a>
+          <a href="mailto:jkorn@cmu.edu"><p class="white-text">jkorn@cmu.edu</p></a>
+        </div>
+        <div class="col s12 m3">
+          <a href="https://github.com/vulq"><img src="github-mark.png" style="margin-top:8px;"></a>
+          <a href="https://github.com/vulq"><p class="white-text"style="margin-top:21px;">vulq</p></a>
+        </div>
+        <div class="col s12 m3">
+          <a href="https://www.linkedin.com/in/jkorn21"><img src="social22.png" style="margin-top:8px;"></a>
+          <a href="https://www.linkedin.com/in/jkorn21"><p class="white-text"style="margin-top:21px;">jkorn21</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2017 Joshua Korn
+      </div>
+    </div>
+  </footer>
+</html>
