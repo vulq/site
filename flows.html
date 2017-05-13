@@ -81,14 +81,14 @@
   
   <div id="background" class="section scrollspy no-pad-bot">
     <h2 class="center cyan-text text-darken-3">Background</h2>
-    <div class="center row container">
-      <p style="font-size:20px;">Network flows are everywhere, across mathematics, computer science, and operations research. From finding bipartite matchings to modeling traffic to image segmenting, a lot of unique problems can be modeled as a network flow.  Commonly, we wish to find the maximum flow through a given network. There are many different algorithms to do so, but most of them are inherently sequential.  As networks get large, as is the case in many real-life applications, these algorithms may not always have optimal performance, and as such would greatly benefit from a significant speedup from parallelism, which is what this project aims to achieve.</p>
+    <div class="row container">
+      <p style="font-size:20px;">Network flows are everywhere, across mathematics, computer science, and operations research. From finding bipartite matchings to modeling traffic to image segmenting, a lot of unique problems can be modeled as a network flow.  Commonly, we wish to find the maximum flow through a given network. There are many different algorithms to do so, but most of them are inherently sequential.  As networks get large, as is the case in many real-life applications, these algorithms may not always have optimal performance, and as such, I wish to investigate how much speedup can be obtained with these algorithms due to parallelism.</p>
     </div>
   </div>
 
   <div id="proposal" class="section scrollspy no-pad-bot">
     <h2 class="center cyan-text text-darken-3">Proposal</h2>
-    <div class="center row container">
+    <div class="row container">
      <p style="font-size:20px;">Parallelizing max-flow algorithms is inherently challenging, as with other graph algorithms, there are many dependencies between nodes, and most common algorithms used for max-flow computations are sequential.  There is some, but not much research on the topic of parallelizing these algorithms. Figuring out how to partition a given graph over workers for optimal parallelization, and minimizing the need for atomicity and communication as much as possible, will be the main challenge.</p>
      <p style="font-size:20px;">The only starter code I may utilize is my parallel BFS and some of the test graphs from Assignment 3. I plan on developing on the GHC machines, which have 8 cores that support hyperthreading (16 logical cores) and a GTX 1080. The GHC machines are perfect, since they are easily accessible, and allow me to test both my parallel CPU and GPU implementations. I will be referencing algorithms that I learned in 15-451, as well as some papers on parallel flow algorithms that I will cite as they are used.</p>
       <p style="font-size:20px;">For this project, I wish to take advantage of parallelism available in modern CPUs and GPUs to obtain a significant speedup in certain max flow algorithms. In particular, I plan on implementing three max flow algorithms in three ways (sequential, parallel for CPUs, and parallel for GPUs using NVIDIA CUDA) - these three algorithms are Edmonds-Karp, Dinic's, and Push-relabel (Goldberg-Tarjan). The first of these algorithms, Edmonds-Karp, is parallelizable between iterations since it uses BFS to find shortest paths. Dinic's algorithm uses BFS as a subroutine as well, and uses the concept of a layered graph to obtain a better asymptotic runtime than Edmonds-Karp. Finally, the Push-relabel algorithm is inherently parallel over vertices, similar to bottom-up BFS, and is already considered one of the most efficient max-flow algorithms, so a large speedup is expected. After implementing all of this, I wish to benchmark the performance of these algorithms on various test graphs (looking at both how the algorithms compare against each other on the same platform, and the speedups obtained from sequential to CPU to GPU). Finally, I want to package these algorithms into a simple C++ library that allows users to easily create graphs and run these algorithms on them (with options to run on CPU or GPU).</p>
@@ -137,13 +137,68 @@
 
   <div id="checkpoint" class="section scrollspy no-pad-bot">
     <h2 class="center cyan-text text-darken-3">Checkpoint</h2>
-    <div class="center row container">
+    <div class="row container">
       <p style="font-size:20px;">The updated schedule is above, and includes everything I have completed for this checkpoint. In particular, I have created a basic testing framework, a system to randomly generate connected graphs to be used for testing, and have decided to go with an adjacency matrix representation for my graphs, where entry (i, j) gives the capacity of that edge. This will take up a bit more memory, but makes accesses a lot quicker and more organized than with using my original plan of an adjacency list representation. Finally, I have a sequential Edmonds-Karp implementation that I will use as a baseline correctness test for my other algorithms. I believe I am still on track to produce all of my deliverables - my goals remain the same. The extras I will have a day or two to implement if I stay on track, so I am not sure if those will happen. What I would want to show at the competition is still the same, namely the different speedup plots obtained. Because I have just set up the foundation for my project so far, I don't have any preliminary results. Currently I don't have any issues that are cause for concern.</p>
     </div>
   </div>
 
   <div id="final" class="section scrollspy no-pad-bot">
-    <!-- <h2 class="center cyan-text text-darken-3">Final</h2> -->
+    <h2 class="center cyan-text text-darken-3">Final</h2>
+    <div class=" row container">
+      <h3 class="center cyan-text text-darken-3">Summary</h3>
+      <p style="font-size:20px;">I implemented three max flow algorithms - Edmonds-Karp, Dinic's, and Push-relabel - both sequentially and in parallel using OpenMP, and analyzed speedups obtained. In particular, I focused on a lock-free Push-relabel algorithm, and was able to obtain up to 6x speedup on tested graphs. I also parallelized this algorithm on GPUs with a single CUDA thread per vertex to benchmark performance, and noticed poor performance, for reasons discussed later. Finally, I wrote a small class-based library to easily represent graphs and run max flow algorithms on them. Tests were run on GHC35, which has an 8-core hyperthreaded CPU and a GTX 1080 GPU. All tests were run using fixed, randomly generated connected graphs with max edge capacity of 50, and results were averaged over multiple trials. Code can be found on my GitHub (link in footer).</p>
+      <div class="col m12">
+        <p style="font-size:20px;">Example usage of the library:</p>
+        <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">FlowGraph</span> <span style="color: #a6e22e">graph</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">6</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">vector</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">tuple</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">,</span> <span style="color: #66d9ef">int</span><span style="color: #f8f8f2">,</span> <span style="color: #66d9ef">int</span><span style="color: #f92672">&gt;&gt;</span> <span style="color: #f8f8f2">edges;</span>
+<span style="color: #f8f8f2">edges.push_back(std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">make_tuple(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e">// (from, to, capacity)</span>
+<span style="color: #f8f8f2">edges.push_back(std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">make_tuple(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">));</span>
+<span style="color: #f8f8f2">edges.push_back(std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">make_tuple(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">));</span>
+<span style="color: #f8f8f2">edges.push_back(std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">make_tuple(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">));</span>
+<span style="color: #f8f8f2">edges.push_back(std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">make_tuple(</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">));</span>
+<span style="color: #f8f8f2">edges.push_back(std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">make_tuple(</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">));</span>
+<span style="color: #f8f8f2">edges.push_back(std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">make_tuple(</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">));</span>
+<span style="color: #f8f8f2">graph.AddEdges(</span><span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">edges);</span>
+<span style="color: #f8f8f2">graph.DeleteEdge(</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">auto</span> <span style="color: #f8f8f2">result</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">graph.FlowEdmondsKarp();</span>
+</pre></div>
+      </div>
+    </div>
+    <div class="center row container">
+      <h3 class="center cyan-text text-darken-3">Background</h3>
+      <p style="font-size:20px;">See main section "Background" for motivation. All of these algorithms operate on a graph with specified edge capacities, and output the value of the max flow along with all edges that have positive flow pushed on them. The main challenge is that most flow algorithms are not inherently parallelizable. Many algorithms use the concept of a residual graph, which is essentially the state of the graph after flow is pushed during a single iteration. Therefore, synchronization is needed between iterations - flow cannot be pushed on the residual graph if the residual graph is not yet created. Algorithms that don’t use residual graphs, such as Push-relabel, instead require massive amounts of system-wide synchronization, as explained later. As well, for general graphs, there is not much data locality. This especially true for the Push-relabel algorithm, which keeps track of heights and excess flow values for each node, which needs to be constantly accessed by all neighbors. For all of these reasons, there is not much research done in parallel flows. As well, existing sequential algorithms are, in most practical uses, extremely fast.</p>
+
+      <p style="font-size:20px;">The three algorithms I investigated were the following:</p>
+      <div class="col s12 m4">
+        <h4 class="center cyan-text text-darken-3">Edmonds-Karp</h4>
+        𝑂(𝑛𝑚&sup2;). Uses BFS as a subroutine to pick the shortest in the residual graph at each iteration. Not parallelizable between iterations.
+      </div>
+      <div class="col s12 m4">
+        <h4 class="center cyan-text text-darken-3">Dinic's</h4>
+        𝑂(𝑛&sup2;𝑚). Uses BFS at each iteration to construct a layered graph (edges only from depth 𝑑 to 𝑑+1 from the source vertex). Then, the algorithm uses DFS to find a blocking flow, where every path in the layered graph has a saturated edge (no residual capacity). Only the layered graph construction is parallelizable.
+      </div>
+      <div class="col s12 m4">
+        <h4 class="center cyan-text text-darken-3">Push-relabel</h4>
+        𝑂(𝑛&sup2;𝑚). Uses the idea of height labels and excess flow – if a node has excess flow, try to push it to a lower height neighbor, or else try to increase your height. This algorithm is much more parallelizable (can parallelize over vertices), and as a result was the main focus of this project. Due to excess flows, this algorithm does not necessarily maintain a valid flow until the very end. An analogy to how this algorithm operates is how water flows through pipes.
+      </div>
+    </div>
+    <div class="center row container">
+      <h3 class="center cyan-text text-darken-3">Approach</h3>
+      <div class="col s12">
+        <p style="font-size:20px;">All code was done in C++/CUDA. CPU parallelism was done with OpenMP. For both Edmonds-Karp and Dinic's, the only really parallelizable part of the algorithm are the BFS subroutines. Therefore, I used modified versions of my OpenMP parallel top-down BFS implementation from assignment 3 in these algorithms to obtain speedups. Just as in the assignment, threads map to local frontiers that are then merged together with fetch-and-add operations. The main focus of parallelizing these two algorithms was for analysis (see the "Results" subsection), and not so much a focus on the code itself. I was originally intending on trying to parallelize these algorithms on GPUs as well, but realized that it wouldn't be effective since the only parallelizable routine is BFS, which due to access patterns in general graphs and low arithmetic intensity, would not benefit (and would most likely observe negative speedups) from GPU parallelization.</p>
+      </div>
+      <div class="col s12">
+        <p style="font-size:20px;">My main focus was on parallelizing the Push-relabel algorithm.</p>
+      </div>
+    </div>
+    <div class="row container">
+      <h3 class="center cyan-text text-darken-3">Results</h3>
+      <p class="center" style="font-size:20px;">COMING REALLY SOON</p>
+    </div>
+    <div class="row container">
+      <h3 class="center cyan-text text-darken-3">References</h3>
+      <p class="center" style="font-size:20px;">COMING REALLY SOON</p>
+    </div>
     <div class="center row">
       <img src="jkorn2.jpeg" class="circle center">
     </div>
